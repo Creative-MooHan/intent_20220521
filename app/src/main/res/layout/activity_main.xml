@@ -25,10 +25,12 @@
 
         />
     <EditText
+        android:id="@+id/edtMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="아무말이나 입력하세요"/>
     <Button
+        android:id="@+id/btnSend"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="메세지를 다른화면에서 보여주기"/>
