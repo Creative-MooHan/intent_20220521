@@ -1,9 +1,11 @@
 package com.nepplus.intent_20220521
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
+import java.net.URI
 
 class MainActivity : AppCompatActivity() {
 
@@ -64,6 +66,24 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnEditNickname.setOnClickListener {  }
+
+        btnDial.setOnClickListener {
+
+            val inputPhoneNum = editPhoneNum.text.toString()
+
+//            2.안드로이드 기본 전화앱으로 이동
+
+//            2-1 어느 번호에? => Uri로 저장
+             val myUri = Uri.parse("tel:01051113237") //띄어쓰기 끼어있으면 앱이 죽는다.
+
+//             2.2 Uri + DIAL => Intent로 화면이동
+              val myIntent = Intent(Intent.ACTION_DIAL, myUri)
+              startActivity(myIntent)
+
+
+        }
+
+
 
 
 
